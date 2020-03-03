@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="content">
+
+        <div class="content_rgt">
+            <div class="register_sec">
+                <div>
+                    <h2 style="background-color: red;">{{message}}</h2>
+                </div>
+                <h1>Create An Account</h1>
+                <form [formGroup]="registerationForm" (ngSubmit)="onSubmit(registerationForm)">
+                    <ul>
+                        <li><span>Username</span><input type="text" formControlName="userName" placeholder="Enter your username"></li>
+                        <li><span>Password</span><input type="text" formControlName="passWord" placeholder="Enter your password"></li>
+                        <li><span>Email</span><input type="text" formControlName="email" placeholder="Enter your email"></li>
+                        <li><span>First Name</span><input type="text" formControlName="firstName" placeholder="Enter your first name"></li>
+                        <li><span>Last Name</span><input type="text" formControlName="lastName" placeholder="Enter your last name"></li>
+                        <li><input type="checkbox">I agree to Term & Conditions</li>
+                        <li><input type="submit" value="Register"></li>
+                    </ul>
+                </form>
+                <div class="addtnal_acnt">I already have an account.
+                    <a href=" ">Login My Account !</a></div>
+            </div>
+            <!-- <div *ngif="isLoading">Loading</div> -->
+        </div>
+
+        <app-welcome></app-welcome>
+    </div>
+</div>
